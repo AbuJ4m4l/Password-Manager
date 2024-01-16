@@ -6,7 +6,6 @@ pub struct Database {
 }
 
 impl Database {
-
     pub fn new(key: String) -> Result<Database, rusqlite::Error> {
         let path = dirs::config_dir().unwrap().join("my_passmng");
         let conn = Connection::open(path)?;
